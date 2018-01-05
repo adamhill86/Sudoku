@@ -125,7 +125,7 @@ public class Sudoku {
      * @param startCol The column to check
      * @return A List of integers representing the valid values.
      */
-    public List<Integer> findValidNumbers(int startRow, int startCol) {
+    private List<Integer> findValidNumbers(int startRow, int startCol) {
         List<Integer> validNumbers = new ArrayList<>();
 
         for (int i = 1; i <= 9; i++) {
@@ -143,7 +143,7 @@ public class Sudoku {
      * @param number the value to be checked
      * @return True if the number is in the row; false otherwise
      */
-    public boolean containedInRow(int row, int number) {
+    private boolean containedInRow(int row, int number) {
         for (int j = 0; j < MAX_SIZE; j++) {
             if (puzzle[row][j] == number) {
                 return true;
@@ -158,7 +158,7 @@ public class Sudoku {
      * @param number The value to be checked
      * @return True if the number is in the row; false otherwise
      */
-    public boolean containedInCol(int col, int number) {
+    private boolean containedInCol(int col, int number) {
         for (int i = 0; i < MAX_SIZE; i++) {
             if (puzzle[i][col] == number) {
                 return true;
@@ -174,7 +174,7 @@ public class Sudoku {
      * @param number The value to be checked
      * @return True if the number is in the box; false otherwise
      */
-    public boolean containedInGrid(int row, int col, int number) {
+    private boolean containedInGrid(int row, int col, int number) {
         int startingRow = (row / 3) * 3;
         int startingCol = (col / 3) * 3;
 

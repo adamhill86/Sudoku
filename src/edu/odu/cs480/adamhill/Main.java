@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 	    Sudoku sudoku = new Sudoku();
-	    PuzzleReader pr = new PuzzleReader("evil3.txt");
+	    PuzzleReader pr = new PuzzleReader("test.txt");
 	    sudoku = pr.readPuzzle();
 	    System.out.println(sudoku);
 
